@@ -1,0 +1,173 @@
+(DSA)[1]  Write a ‘C’ program to accept a string from user and reverse it using Static
+implementation of Stack.
+ ans :-
+      #include<stdio.h>
+  #include<stdlib.h>
+  #define MAX 50
+  struct stack
+  {
+     char a[MAX];
+     int top;
+  }s;
+  void init()
+  {
+    s.top=-1;
+  }
+  int isfull()
+  {
+    if(s.top==MAX-1)
+    return 1;
+    else
+    return 0;
+  }
+  void disp()
+  {
+     int temp;
+     for(temp=s.top; temp>=0; temp--)
+       {
+          printf("%c",s.a[temp]);
+       }
+  }
+  void push(char ch)
+  {
+     if(isfull())
+     {
+        printf("stack is full don't push:");
+     }
+     else
+     {
+       s.top++;
+       s.a[s.top]=ch;
+     }
+  }
+  int main()
+  {
+     char s1[20],ch;
+     int i;
+     init();
+     printf("enter string to print revrese order:");
+     scanf("%s",s1);
+     for(i=0; s1[i]!='\0'; i++)
+     {
+       push(s1[i]);
+     }
+     printf("revrese string=");
+     disp();
+     
+  }
+** * ************************************************************************************************************************************
+
+(DSA) [3]Write a ‘C’ program to create Circularly Doubly Linked list and display it
+
+ans:-
+     #include<stdio.h>
+#include<stdlib.h>
+struct node
+{
+   int data;
+   struct node *next,*prev;
+};
+struct node* create(struct node *list)
+{
+   struct node *newnode,*temp;
+   int n,i;
+   printf("enter limit:");
+   scanf("%d",&n);
+   for(i=0; i<n; i++)
+   {
+     newnode=(struct node*)malloc(sizeof(struct node));
+     printf("enter value:");
+     scanf("%d",&newnode->data);
+     if(list==NULL)
+     {
+       temp=list=newnode;
+       newnode->next=list;
+       list->prev=temp;
+     }
+     else
+     {
+        temp->next=newnode;
+        newnode->prev=temp;
+        temp=newnode;
+        temp->next=list;
+        list->prev=temp;
+     }
+   }
+   return list;
+}
+void disp(struct node *list)
+{
+   struct node *temp=list;
+   do
+   {
+      printf("%d\t",temp->data);
+      temp=temp->next;
+      
+   }while(temp!=list);
+}
+
+int main()
+{
+  struct node *list=NULL;
+  list=create(list);
+  printf("doubly circular linked-list=");
+    disp(list);
+}
+*************************************************************************************************************************************
+
+(PHP)[2]Write a PHP script for the following: Design a form to accept two strings from the
+user.
+Find the first occurrence and the last occurrence of the small string in the large string.
+Also count the total number of occurrences of small string in the large string.
+Provide a text box to accept a string, which will replace the small string in the large string.
+
+ans:-
+    <html>
+    <body>
+        <form method="POST" action="#">
+            enter large string:
+            <input type="text" name="t1"><br>
+            enter small string:
+            <input type="text" name="t2"><br>
+            enter string to replace:
+            <input type="text" name="t3"><br>
+            <input type="submit"><br>
+        </form>
+    </body>
+</html>
+<?php
+  $str1=$_POST["t1"];
+  $str2=$_POST["t2"];
+  $rep=$_POST["t3"];
+ 
+  $res=strrpos($str1,$str2);
+  $res1=strrpos($str1,$str2);
+  $cnt=strlen($str2);
+  
+$rep=str_replace($str2,$rep,$str1);
+
+  echo"<br> first occurances=".$res;
+  echo"<br> last occurances=".$res1;
+  echo("<br>occurance of small string=".$cnt);
+  echo"<br>replace string=".$rep;
+  
+?>
+
+************************************************************************************************************************************
+
+(R)[3] Write an R program to sort a Vector in ascending and descending order.
+ ans:-
+ 
+   x=c(45,66,87,98,45)
+> print(x)
+[1] 45 66 87 98 45
+> print(sort(x))
+[1] 45 45 66 87 98
+> print(sort(x,decreasing=TRUE))
+[1] 98 87 66 45 45
+
+ 
+
+
+
+
