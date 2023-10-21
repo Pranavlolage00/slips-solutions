@@ -1,0 +1,6 @@
+a=data.frame(
+name=c("om","sai","ram","sham","aba"),
+address=c("shrirampur","pune","mumbai","pune","mumbai"),
+salary=c(25000,35000,40000,50000,45000));
+
+print(a[order(a$name),])

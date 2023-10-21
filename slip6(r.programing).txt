@@ -1,0 +1,10 @@
+marks<-c(60,40,50,80,67)
+subname<-c("java","php","ds","rdbms","sf")
+
+barplot(marks,
+main="comparing 5 subjects marks",
+xlab="name of subject",
+ylab="marks",
+names.arg=subname,
+col="red")
+

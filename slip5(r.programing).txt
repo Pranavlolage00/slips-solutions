@@ -1,0 +1,8 @@
+> a<-c(10,20,30,40)
+> 
+> sprintf("Sum of vector:%d",sum(a))
+[1] "Sum of vector:100"
+> sprintf("Mean:%f",mean(a))
+[1] "Mean:25.000000"
+> sprintf("product:%d",prod(a))
+[1] "product:240000"

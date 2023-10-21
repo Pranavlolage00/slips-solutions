@@ -1,0 +1,10 @@
+> a<-c(10,50,30,40,60)
+> 
+> print("Ascending order:")
+[1] "Ascending order:"
+> print(sort(a))
+[1] 10 30 40 50 60
+> print("Descending order:")
+[1] "Descending order:"
+> print(sort(a,decreasing=TRUE))
+[1] 60 50 40 30 10

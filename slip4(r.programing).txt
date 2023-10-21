@@ -1,0 +1,14 @@
+> print("First 10 letter in lowercase:")
+[1] "First 10 letter in lowercase:"
+> print(head(letters,10))
+ [1] "a" "b" "c" "d" "e" "f" "g" "h" "i" "j"
+> 
+> print("Last 10 letter in uppercase:")
+[1] "Last 10 letter in uppercase:"
+> print(tail(LETTERS,10))
+ [1] "Q" "R" "S" "T" "U" "V" "W" "X" "Y" "Z"
+> 
+> print("22 to 24 uppercase:")
+[1] "22 to 24 uppercase:"
+> print(tail(LETTERS[22:24]))
+[1] "V" "W" "X"

@@ -1,0 +1,6 @@
+> a<-c("a","b","c","d","e")
+> b<-c("d","e","f","g","h")
+> 
+> ans=setdiff(a,b)
+> print(ans)
+[1] "a" "b" "c"

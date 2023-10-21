@@ -1,0 +1,10 @@
+a=c(10,20,30,40,50)
+b=c(60,50,40,80,90)
+
+print("data frame:")
+ab=data.frame(a,b)
+print(ab)
+
+print(intersect(a,b))
+print(unique(a,b))
+

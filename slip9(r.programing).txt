@@ -1,0 +1,11 @@
+a=c("a","b","c","d")
+print("original vector:")
+print(a)
+
+f=factor(a)
+print("factor of vector:")
+print(f)
+
+print("change level of first:")
+levels(f)[1]="z"
+print(f)
